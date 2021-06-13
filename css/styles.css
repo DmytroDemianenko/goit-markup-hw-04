@@ -12,6 +12,7 @@
   --back-color-order: #188ce8;
   --card-set-gap: 30px;
   --card-content-bc: #eeeeee;
+  --icon-color: #afb1b8;
 }
 * {
   margin: 0;
@@ -118,6 +119,7 @@ img {
   display: flex;
   flex-direction: row;
   margin-left: auto;
+  align-items: flex-end;
 }
 .contacts-list-link {
   font-style: normal;
@@ -132,14 +134,26 @@ img {
 .contacts-list > li:not(:last-child) {
   margin-right: 50px;
 }
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 /* HERO SECTION  */
 .main {
   padding-top: 0;
   padding-bottom: 0;
-}
-.hero {
-  background-color: var(--back-dark);
+  max-width: 1600px;
   height: 600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bc.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main-title {
   color: var(--white-color);
@@ -183,6 +197,7 @@ img {
 .button.order:hover,
 .button.order:focus {
   background-color: var(--back-color-order);
+  cursor: pointer;
 }
 /* WHAT WE DO */
 
@@ -214,6 +229,7 @@ img {
   line-height: 1.17em;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  margin-top: 30px;
 }
 .caption-title pre::first-letter {
   text-transform: uppercase;
@@ -229,10 +245,19 @@ img {
 .advantages > .advantegs-item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
-  /* margin-top: 30px; */
 }
 .card-adv-text {
   margin-top: 10px;
+}
+.advantages-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-background);
+  fill: currentColor;
 }
 
 /* Наша команда */
@@ -271,7 +296,7 @@ img {
 }
 .card-team-content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 .card-team-text {
   padding-top: 10px;
@@ -282,6 +307,33 @@ img {
 .our-team .heading {
   text-align: center;
 }
+/* .social-icon-list * {
+  outline: 1px solid red;
+} */
+.social-icon-list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.social-icon-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-color);
+  margin-right: 10px;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--active-color);
+  fill: var(--white-color);
+}
+
 /* PORTFOLIO */
 .products-list {
   padding: 0;
