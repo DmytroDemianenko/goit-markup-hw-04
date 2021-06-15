@@ -35,8 +35,9 @@ body {
   margin-right: auto;
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 ul {
   list-style: none;
@@ -72,6 +73,8 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 0;
+}
+.header {
   border-bottom: 1px solid #ececec;
 }
 .nav-list {
@@ -116,12 +119,14 @@ img {
 }
 .contacts-list {
   line-height: 1.14em;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
   margin-left: auto;
   align-items: flex-end;
 }
 .contacts-list-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
   font-style: normal;
   color: inherit;
   padding-top: 32px;
@@ -141,10 +146,8 @@ img {
 
 /* HERO SECTION  */
 .main {
-  padding-top: 0;
-  padding-bottom: 0;
-  max-width: 1600px;
   height: 600px;
+  display: flex;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -154,6 +157,19 @@ img {
   background-position: center;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 200;
+  padding-bottom: 200;
+  /* text-align: center;
+  align-items: center; */
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 200;
+  padding-bottom: 200;
 }
 .main-title {
   color: var(--white-color);
@@ -165,7 +181,13 @@ img {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
+  /* padding-top: 200px; */
+}
+.hero-title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .hero .main-title,
 .advantages .caption-title {
@@ -199,28 +221,6 @@ img {
   background-color: var(--back-color-order);
   cursor: pointer;
 }
-/* WHAT WE DO */
-
-.what-we-do {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.heading {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17em;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-  text-align: center;
-}
-.img-list {
-  display: flex;
-  flex-direction: row;
-  margin-top: 50px;
-}
-.img-list > li:not(:last-child) {
-  margin-right: 30px;
-}
 /* SECTION ADVANTAGES */
 
 .caption-title {
@@ -229,7 +229,7 @@ img {
   line-height: 1.17em;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 .caption-title pre::first-letter {
   text-transform: uppercase;
@@ -259,15 +259,34 @@ img {
   background-color: var(--button-background);
   fill: currentColor;
 }
+/* WHAT WE DO */
+
+.heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17em;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  text-align: center;
+}
+.img-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.img-list > li:not(:last-child) {
+  margin-right: 30px;
+}
+.what-we-do {
+  padding-bottom: 94;
+}
 
 /* Наша команда */
 .teams {
-  padding-bottom: 0;
+  background-color: var(--button-background);
 }
 .our-team {
-  background-color: var(--button-background);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin-bottom: 50px;
 }
 .item {
   background-color: var(--white-color);
@@ -307,9 +326,7 @@ img {
 .our-team .heading {
   text-align: center;
 }
-/* .social-icon-list * {
-  outline: 1px solid red;
-} */
+
 .social-icon-list {
   display: flex;
   text-align: center;
@@ -344,7 +361,6 @@ img {
   margin-left: calc(-1 * var(--card-set-gap));
 }
 .products-list > .products-list-item {
-  /* outline: 1px dotted blue; */
   flex-basis: calc(100% / 3 - 30px);
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
@@ -378,18 +394,24 @@ img {
   min-width: 73px;
   border: 0px;
   padding: 6px 22px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .products-button:not(:last-child) {
   margin-right: 8px;
 }
 .sellect-but {
   background-color: var(--button-background-active);
+  color: var(--white-color);
 }
 
 /* PRODUCTS LIST */
 .products-list {
   font-size: 16px;
   line-height: 1.88em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .title {
   font-weight: 700;
@@ -398,14 +420,25 @@ img {
   letter-spacing: 0.06em;
 }
 /* FOOTER */
-.foot {
+.footer {
   background-color: var(--back-dark);
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.foot {
   color: var(--white-color);
   display: flex;
-  margin-bottom: 0;
   flex-direction: column;
-  padding-top: 60px;
-  padding-bottom: 60px;
+}
+.logo-link-foot {
+  font-family: var(--accent-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19em;
+  letter-spacing: 0.03em;
+  padding: 0;
+  margin-top: 60px;
 }
 .foot-logo {
   padding: 0;
