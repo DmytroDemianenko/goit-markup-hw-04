@@ -188,7 +188,8 @@ img {
   align-items: center;
 }
 .hero .main-title,
-.advantages .caption-title {
+.advantages .caption-title,
+.connect-title {
   text-transform: uppercase;
 }
 .visual-hiden {
@@ -431,6 +432,7 @@ img {
   padding: 60px 15px;
   margin-right: auto;
   margin-left: auto;
+  display: flex;
 }
 .foot {
   color: var(--white-color);
@@ -467,4 +469,10 @@ img {
 }
 .logo-item-foot {
   color: var(--white-color);
+}
+.connect {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 70px;
 }
