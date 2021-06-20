@@ -250,6 +250,9 @@ img {
 .card-adv-text {
   margin-top: 10px;
 }
+.card-adv-content {
+  margin-top: 30px;
+}
 .advantages-icon {
   display: flex;
   width: 270px;
@@ -282,8 +285,8 @@ img {
   margin-right: 30px;
 }
 .what-we-do {
-  padding-bottom: 94;
   padding-bottom: 94px;
+  padding-top: 0;
 }
 
 /* Наша команда */
@@ -437,9 +440,10 @@ img {
 
 .products-list-item:hover,
 .products-list-item:focus {
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* PORTFOLIO BUTTON */
@@ -472,7 +476,14 @@ img {
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
-
+.button:hover,
+.button:focus {
+  background-color: var(--button-background-active);
+  color: var(--white-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
 /* FOOTER */
 .footer {
   background-color: var(--back-dark);
